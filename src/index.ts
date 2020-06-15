@@ -1,20 +1,22 @@
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
+class Human {
+  public name: string;
+  private age: number;
+  public gender: string;
+  constructor(name: string, age: number, gender: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 }
 
-const person = {
-  name: "Juhee",
-  age: 29,
-  gender: "female"
-};
+const lynn = new Human("Lyin", 18, "female");
 
-// argument에 gender? 이렇게 쓰면 저건 필수가 아닌 선택을 의미한다.
-const sayHi = (person: Human): string => {
+// const sayHi = (person: Human): string => {
+// 이렇게 쓰면 에러남. Property 'age' is private and only accessible within class 'Human'.
+const sayHi = (person): string => {
   return `Hello ${person.name}, you are ${person.age},  you are a ${person.gender}`!;
 };
 
-console.log(sayHi(person));
+console.log(sayHi(lynn));
 
 export {};
