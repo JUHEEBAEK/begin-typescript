@@ -1,8 +1,20 @@
-// argument에 gender? 이렇게 쓰면 저건 필수가 아닌 선택을 의미한다.
-const sayHi = (name: string, age: number, gender: string): string => {
-  return `Hello ${name}, you are ${age},  you are a ${gender}`!;
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
+
+const person = {
+  name: "Juhee",
+  age: 29,
+  gender: "female"
 };
 
-console.log(sayHi("Juhee", 29, "female"));
+// argument에 gender? 이렇게 쓰면 저건 필수가 아닌 선택을 의미한다.
+const sayHi = (person: Human): string => {
+  return `Hello ${person.name}, you are ${person.age},  you are a ${person.gender}`!;
+};
+
+console.log(sayHi(person));
 
 export {};
