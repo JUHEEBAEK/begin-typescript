@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "hello.js",
-  "dependencies": {},
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  },
   "devDependencies": {
     "tsc-watch": "^4.2.8",
     "typescript": "^3.9.5"
