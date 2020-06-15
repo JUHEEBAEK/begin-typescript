@@ -1,20 +1,29 @@
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
+  constructor(
+    index: number,
+    hash: string,
+    previosHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previosHash;
+    this.data = data;
+    this.timestamp = timestamp;
+  }
 }
 
-const person = {
-  name: "Juhee",
-  age: 29,
-  gender: "female"
-};
-
 // argument에 gender? 이렇게 쓰면 저건 필수가 아닌 선택을 의미한다.
-const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age},  you are a ${person.gender}`!;
-};
+const genesisBlock: Block = new Block(0, "2020202020202", "", "Hello", 123456);
 
-console.log(sayHi(person));
+let blockchain: [Block] = [genesisBlock];
+
+console.log(blockchain);
 
 export {};
