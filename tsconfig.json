@@ -3,9 +3,11 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
     "target": "ES2015",
     "sourceMap": true,
-    "outDir": "dist",
+    "removeComments": true,
     "moduleResolution": "node"
   }
 }
