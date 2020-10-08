@@ -50,4 +50,4 @@ board[0].piece = {
   move(from: Cell, to: Cell) {
     return true;
   }
-};
+}; 
