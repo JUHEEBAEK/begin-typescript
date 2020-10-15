@@ -1,6 +1,6 @@
 // generic을 이용하여  type 을 파라미터화 하는것. x: 
 // <T> type에 대한 파라미터화
-// Type은 대문자로 쓰는게 관례.
+// Type은 대문자로 쓰는게 관례.1
 
 function createPromise<T>(x: T, timeoute: number) {
   return new Promise<T>((reslove, reject) => {
